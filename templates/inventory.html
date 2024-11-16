@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingredient Inventory</title>
+</head>
+<body>
+    <h1>Ingredient Inventory</h1>
+    <table border="1">
+        <tr>
+            <th>Ingredient</th>
+            <th>Stock Quantity</th>
+        </tr>
+        {% for ingredient in ingredients %}
+        <tr>
+            <td>{{ ingredient[1] }}</td>
+            <td>{{ ingredient[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/add_ingredient" method="POST">
+        <input type="text" name="ingredient_name" placeholder="Ingredient Name" required>
+        <input type="number" name="stock_quantity" placeholder="Quantity" required>
+        <button type="submit">Add Ingredient</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

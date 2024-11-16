@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seasonal Flavors</title>
+</head>
+<body>
+    <h1>Seasonal Flavors</h1>
+    <ul>
+        {% for flavor in flavors %}
+        <li>{{ flavor[1] }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/add_flavor" method="POST">
+        <input type="text" name="flavor_name" placeholder="New Flavor" required>
+        <button type="submit">Add Flavor</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

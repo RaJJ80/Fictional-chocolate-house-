@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Customer Feedback</title>
+</head>
+<body>
+    <h1>Customer Feedback</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Customer Name</th>
+                <th>Flavor Suggestion</th>
+                <th>Allergy Concern</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for feedback in feedbacks %}
+            <tr>
+                <td>{{ feedback[0] }}</td>
+                <td>{{ feedback[1] }}</td>
+                <td>{{ feedback[2] }}</td>
+                <td>{{ feedback[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>
+    
